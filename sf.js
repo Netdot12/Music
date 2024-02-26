@@ -569,9 +569,7 @@ h1 {
          font-size:60px;
      }
 
-     p {
-         font-size:30px;
-     }
+
      
      .left{
          margin-top:80px;
