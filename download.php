@@ -1,6 +1,6 @@
 <?php
 // File path
-$file = 'path/to/your/file.txt';
+$file = 'Alan_Walker_-_Faded.png';
 
 // Set headers for download
 header('Content-Description: File Transfer');
