@@ -168,7 +168,7 @@ const navBarHTML = `
 
   <div class="nav" style="position:relative;bottom:1px;margin-bottom:20px;overflow:hidden;border:solid 1px auto;height:100px;">
 <i style="color:white;position:absolute;left:10px;top:35px;"  class="fa fa-arrow-left" autocapitalize=" " for="menu-toggle" alt="Icon" id="icon" onclick="toggleNavbar()"></i>
-    <h1 style="font-size:30px;position:absolute;right:80px;bottom:30px;">NETDOT.COM</h1>
+    <h1 style="font-size:30px;position:relative;right:80px;top:30px;">NETDOT.COM</h1>
  <a style="overflow:hidden;height:1px;width:1px;" href="music search.html">
 <i style="position:absolute;right:3px;top:35px;" class="fa fa-search" ></i>
   </a>
