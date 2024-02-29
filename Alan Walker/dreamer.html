@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="dreamer.css">
+  <title>Download Dreamer by Alan Walker</title>
+</head>
+<style>
+
+body {
+      font-family: Arial, sans-serif;
+      background-color:#56A5EC;
+      margin: 0;
+      colour:white;
+      padding: 0;
+      text-align:center;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+ 
+    p {
+      margin: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      color:black;
+    }
+
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      colour:#151B54;
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    body {
+        font-size: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+    .download-button {
+      display: block;
+      height: 10px;
+      width: 200px;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color:#151B54;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .download-button:hover {
+      background-co
+      lor: #0056b3;
+    }
+  #subscribe-button{
+    background-color:#007bff;
+    
+  }
+
+#subscribe-message {
+  
+  display: none;
+  background-color:red;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  border-radius: 50px;
+  bottom:300px;
+  left: 30px;
+  right: 30px;
+  text-align: center;
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+  
+  <span id="header">
+    
+  </span>
+   <h1 id="mainHeading">
+  Dreamer : Alan Walker
+  </h1>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO1NRpQifLQuOA4t39kLFeBF3QkC994K-w7A&usqp=CAU">
+  <p>
+"Dreamer" is a song recorded by British-Norwegian record producer and DJ Alan Walker, released by NoCopyrightSounds on 7 April 2023.[2]
+  </p>
+   
+ 
+  <h2>Stream and Download  Dreamer  </h2>
+ <audio controls>
+  <source src="https://drive.google.com/uc?export=download&id=12WwkG1t3SoEebI-nrgoZ14FzGS__luew" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+  
+  <div id="subscribe-message">Thank you for Choosing Netdot!<br>
+    Please download more </div>
+
+<button id="subscribe-button" onclick="showSubscribeMessage()">
+  <a href="https://drive.google.com/uc?export=download&id=12WwkG1t3SoEebI-nrgoZ14FzGS__luew" class="download-button" download>Download Song</a>
+  
+</button>
+  <br>
+  
+  
+  
+<h2>Lyrics</h2>
+  <h1>
+    
+    This Song Is An Instrumental
+    
+    
+  </h1>
+  <script src="sf.js">
+    const message = document.getElementById("subscribe-message");
+
+    function showSubscribeMessage() {
+      message.style.display = "block";
+
+      // Automatically hide the message after 5 seconds (5000 milliseconds)
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

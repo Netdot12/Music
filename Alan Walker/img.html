@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read More Example</title>
+  <style>
+    .message {
+      position: relative;
+    }
+
+    .read-more {
+      position: absolute;
+     
+      background-color: #fff;
+      cursor: pointer;
+      color: blue;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="message" id="message">
+  Your long message goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec dolor vel turpis hendrerit bibendum. Duis accumsan tristique fermentum.
+</div>
+<div class="read-more" id="readMore">...Read more</div>
+
+<script>
+  const messageContainer = document.getElementById('message');
+  const readMoreBtn = document.getElementById('readMore');
+  const maxTextLength = 100; // Set your desired maximum text length
+  let remainingText = '';
+  let isExpanded = false;
+
+  const textContent = messageContainer.innerText;
+
+  if (textContent.length > maxTextLength) {
+    remainingText = textContent.substring(maxTextLength);
+    const truncatedText = textContent.substring(0, maxTextLength);
+    messageContainer.innerText = truncatedText + '';
+    readMoreBtn.style.display = 'block';
+  }
+
+  readMoreBtn.addEventListener('click', () => {
+    if (isExpanded) {
+      messageContainer.innerText = textContent.substring(0, maxTextLength) + '...';
+      readMoreBtn.innerText = 'Read more';
+    } else {
+      messageContainer.innerText = textContent;
+      readMoreBtn.innerText = 'Read less';
+    }
+    isExpanded = !isExpanded;
+  });
+</script>
+</body>
+</html>

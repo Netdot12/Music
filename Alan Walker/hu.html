@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow-x: hidden; /* Optional: Hide horizontal scrollbar if needed */
+      display: block;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .container {
+      margin-top:10px;
+      display: grid;
+      grid-template-columns: auto auto; /* Two columns: one for image, one for text */
+      grid-gap: 10px; /* Adjust as needed */
+    }
+
+    img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .text-container {
+      display: grid;
+      grid-template-rows: auto auto;
+    }
+
+    p {
+      margin: 0; /* Reset default margin for paragraphs */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1GZdReO89yVY1g6fln3WF78BmH4DYyRxW-w&usqp=CAU" alt="Your Image">
+    <div class="text-container">
+      <p>ext</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <img src="  " alt="Your Image">
+    <div class="text-container">
+      <p>Your First Text</p>
+      <p>Your Second Text</p>
+    </div>
+  </div>
+
+  
+  
+</body>
+<script>
+ document.addEventListener('DOMContentLoaded', function () {
+      // Get the starting position of the paragraph with class 'small'
+      var smallParagraph = document.querySelector('.small');
+      var startPosition = smallParagraph.getBoundingClientRect().left;
+
+      // Get all paragraphs without class 'small'
+      var paragraphsWithoutSmallClass = document.querySelectorAll('p:not(.small)');
+
+      // Set the left position for each paragraph without class 'small'
+      paragraphsWithoutSmallClass.forEach(function (paragraph) {
+        paragraph.style.position = 'relative';
+        paragraph.style.left = startPosition + 'px';
+      });
+    });
+  </script>
+</body>
+</html>
+

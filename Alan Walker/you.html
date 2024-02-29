@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Music Comment Section</title>
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.comments-container {
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+  </style>
+</head>
+<body>
+  
+  <div class="comments-container">
+    <h2>Comments</h2>
+    <p id="comment-count">0 Comments</p>
+    <ul id="comments-list"></ul>
+    <div class="comment-input-container">
+      <input type="text" id="name-input" placeholder="Your Name">
+      <textarea id="comment-input" placeholder="Write a comment"></textarea>
+      <button onclick="postComment()">Post Comment</button>
+    </div>
+  </div>
+  
+
+<script>
+function postComment() {
+  const nameInput = document.getElementById("name-input");
+  const commentInput = document.getElementById("comment-input");
+  const commentList = document.getElementById("comments-list");
+  const commentCount = document.getElementById("comment-count");
+
+  if (nameInput.value.trim() !== "" && commentInput.value.trim() !== "") {
+    const newComment = document.createElement("li");
+
+    const commentHeader = document.createElement("div");
+    commentHeader.className = "comment-header";
+    commentHeader.textContent = `${nameInput.value} - ${getCurrentTime()}`;
+    
+    const commentText = document.createElement("p");
+    commentText.textContent = commentInput.value;
+
+    newComment.appendChild(commentHeader);
+    newComment.appendChild(commentText);
+
+    commentList.appendChild(newComment);
+
+    // Update comment count
+    const commentsCount = commentList.getElementsByTagName("li").length;
+    commentCount.textContent = `${commentsCount} Comment${commentsCount !== 1 ? 's' : ''}`;
+
+    // Clear input fields
+    nameInput.value = "";
+    commentInput.value = "";
+  }
+}
+
+function getCurrentTime() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+
+<?php
+// Database connection
+$conn = new mysqli("localhost", "username", "password", "database");
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch files from the database using prepared statements
+$stmt = $conn->prepare("SELECT id, filename FROM files");
+$stmt->execute();
+$result = $stmt->get_result();
+
+// Check for query failure
+if (!$result) {
+    die("Query failed: " . $conn->error);
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Management</title>
+</head>
+<body>
+    <h2>File List</h2>
+
+    <?php
+    while ($row = $result->fetch_assoc()) {
+        $fileId = $row['id'];
+        $filename = $row['filename'];
+
+        // Display file information
+        echo "<p>$filename <a href='download.php?id=$fileId'>Download</a></p>";
+    }
+
+    // Close the database connection
+    $conn->close();
+    ?>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Try It Yourself</title>
+</head>
+<body>
+  <select id="sample" multiple>
+    <option value="Apples"> Apples </option>
+    <option value="Oranges"> Oranges </option>
+    <option value="Grapes"> Grapes </option>
+    <option value="Bananas"> Bananas </option>
+    <option value="Strawberries"> Strawberries </option>
+  </select>
+  <button onclick="getValues();"> Get Values </button>
+  
+  <script type="text/javascript">
+    function getValues() {
+      var options = document.getElementById('sample').options;
+      var options_count = document.getElementById('sample').options.length;
+      var value = [];
+  
+      for(var i = 0; i < options_count; i++) {
+        if(options[i].selected) {
+          value.push(options[i].value);
+        }
+      }
+  
+      alert(JSON.stringify(value));
+    }
+  </script>
+</body>
+</html>
+
